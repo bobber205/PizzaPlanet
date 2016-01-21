@@ -86,7 +86,7 @@ h4 {
 
 h2 span {
   padding: 10px;
-  
+
 }
 h2 span:hover {
   cursor: pointer;
@@ -96,9 +96,17 @@ i {
   display: inline-block;
   padding: 5px;
   font-size: 30px;
-  
+
 }
 
 i:hover {
   cursor: pointer;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 7px;
 }
