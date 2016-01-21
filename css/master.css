@@ -75,8 +75,30 @@ h3 {
   text-transform: uppercase;
   color: #ce2c38;
   font-size: 25px;
+  display: inline-block;
 }
 
 h4 {
   font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+h2 span {
+  padding: 10px;
+  
+}
+h2 span:hover {
+  cursor: pointer;
+}
+
+i {
+  display: inline-block;
+  padding: 5px;
+  font-size: 30px;
+  
+}
+
+i:hover {
+  cursor: pointer;
 }
