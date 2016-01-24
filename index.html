@@ -23,26 +23,31 @@
       <div class="">
         <h4 class="date">special for {{today | date }}</h4>
       </div>
+ 
       <div class="menus">
         <h2>APPETIZERS<span ng-click="addingNewApp = true">+</span></h2> 
+ 
+      <div class="">
+        <h2>APPETIZERS<span ng-click="addingNewApp = true">+</span></h2>
         <div class="" ng-show="addingNewApp">
           <input type="text" name="name" value="" ng-model="newName" placeholder="Name">
           <input type="text" name="name" value="" ng-model="newDescription" placeholder="Description">
           <input type="number" name="name" value="" ng-model="newPrice" placeholder="price">
-          <button type="button" name="button" ng-click="addAppetizer()">Submit</button>   
-          <button type="button" name="button" ng-click="cancelAddAppetizer()">Cancel</button>         
+          <button type="button" name="button" ng-click="addAppetizer()">Submit</button>
+          <button type="button" name="button" ng-click="cancelAddAppetizer()">Cancel</button>
         </div>
         <div class="option" ng-repeat="item in appetizers | filter:{deleted: false}">
           <menu-info info="item"></menu-info>
           <edit-menu info="item"></edit-menu>
         </div>              
       </div>
-      <div class="menus">
+      <div class="">
         <h2>MAINS<span ng-click="addingNewMain=true">+</span></h2>
         <div class="" ng-show="addingNewMain">
           <input type="text" name="name" value="" ng-model="newName" placeholder="Name">
           <input type="text" name="name" value="" ng-model="newDescription" placeholder="Description">
           <input type="number" name="name" value="" ng-model="newPrice" placeholder="price">
+ 
           <button type="button" name="button" ng-click="addMain()">Submit</button>   
           <button type="button" name="button" ng-click="cancelAddMain()">Cancel</button>         
         </div>
@@ -51,12 +56,15 @@
           <edit-menu info="item"></edit-menu>
         </div>
       </div>
-      <div class="menus">
-        <h2>EXTRAS<span ng-click="addingNewExtra=true">+</span></h2>
+       
+      <div class="">
+        <h2>EXTRAS<span ng-click="addingNewExtra = true">+</span></h2>
+ 
         <div class="" ng-show="addingNewExtra">
           <input type="text" name="name" value="" ng-model="newName" placeholder="Name">
           <input type="text" name="name" value="" ng-model="newDescription" placeholder="Description">
           <input type="number" name="name" value="" ng-model="newPrice" placeholder="price">
+ 
           <button type="button" name="button" ng-click="addExtra()">Submit</button>   
           <button type="button" name="button" ng-click="cancelAddExtra()">Cancel</button>         
         </div>
