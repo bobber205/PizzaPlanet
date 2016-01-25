@@ -1,54 +1,7 @@
 app.controller('mainController', ["$scope",function($scope) {
+  //showing current date for the menu
   $scope.today = new Date();
-  $scope.addAppetizer = function() {
-    $scope.addingNewApp = false;
-    newappetizer = {
-      price: $scope.newPrice,
-      description: $scope.newDescription,
-      name: $scope.newName,
-      deleted: false
-    };
-    $scope.appetizers.unshift(newappetizer);
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
-  $scope.cancelAddAppetizer = function () {
-    $scope.addingNewApp = false;
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
-  //  mains
-  $scope.addMain = function() {
-    $scope.addingNewMain = false;
-    newMain = {
-      price: $scope.newPrice,
-      description: $scope.newDescription,
-      name: $scope.newName,
-      deleted: false
-    };
-    $scope.mains.unshift(newMain);
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
-  $scope.cancelAddMain = function() {
-    $scope.addingNewMain = false;
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
 
-
-  // extra
-  $scope.addExtra = function() {
-    $scope.addingNewExtra = false;
-    newExtra = {
-      price: $scope.newPrice,
-      description: $scope.newDescription,
-      name: $scope.newName,
-      deleted: false
-    };
-    $scope.extra.unshift(newExtra);
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
-  $scope.cancelAddExtra = function() {
-    $scope.addingNewExtra = false;
-    $scope.newName = $scope.newPrice = $scope.newDescription = "";
-  };
 // seed data
   $scope.appetizers = [
     {
@@ -110,5 +63,21 @@ app.controller('mainController', ["$scope",function($scope) {
       deleted: false
     },
   ];
+  
+  
+  $scope.menus = {
+    "appetizers": {
+      name: "Appetizers",
+      items: $scope.appetizers
+    },
+    "mains": {
+      name: "Mains",
+      items: $scope.mains
+    },
+    "extra": {
+      name: "Extras",
+      items: $scope.extra
+    }
+  };
 
 }]);
