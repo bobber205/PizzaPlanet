@@ -16,11 +16,10 @@
 
   </head>
   <body ng-app="PizzaPlanetApp" class="container">
-    <div class="">
+    <div class="" style="background-color: #f2f2f2">
       <div class="row" style="position: relative;">
         <div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
           <div class="header">
-
             <span class='whiteText'>PIZZA</span>
             <span class='blackText'>PLANET</span>
           </div>
@@ -28,27 +27,29 @@
       </div>
 
     </div>
-    <div class="" ng-controller="mainController">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="">
-            <!-- showing current date for the menu -->
-            <h4 class="date">special for {{today | date }}</h4>
-          </div>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="" ng-repeat="menu in menus">
-            <new-menu menu ="menu"></new-menu>
-            <div class="option" ng-repeat="item in menu.items | filter:{deleted: false}">
-              <menu-info info="item"></menu-info>
-              <edit-menu info="item"></edit-menu>
+    <div class="mainPizzaContent">
+      <div class="" ng-controller="mainController" style="padding-top: 50px;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="">
+              <!-- showing current date for the menu -->
+              <h4 class="date">special for {{today | date }}</h4>
             </div>
           </div>
-        </div>
 
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="" ng-repeat="menu in menus">
+              <new-menu menu ="menu"></new-menu>
+              <div class="option" ng-repeat="item in menu.items | filter:{deleted: false}">
+                <menu-info info="item"></menu-info>
+                <edit-menu info="item"></edit-menu>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </body>
