@@ -1,1 +1,2 @@
-var app = angular.module("PizzaPlanetApp", [])
+var app = angular.module("PizzaPlanetApp", []);
+console.log("testing");

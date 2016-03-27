@@ -14,9 +14,23 @@ body {
   margin: 150px auto;
   width: 70%;
   height: auto;
+  padding: 3% !important;
 
 }
 
+.header {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: #ce2c38;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+  /*line-height: 150px;
+  display: relative;*/
+}
+ 
+/*
 h1 {
   display: inline-block;
   width: 140px;
@@ -30,16 +44,16 @@ h1 {
   top: 70px;
   left: 45%;
   line-height: 1.1;
-}
+}*/
 
 .whiteText {
   color: white;
   padding: 35px 0 0 5px;
   font-size: 37px;
-  display: inline-block;
+  display: block;
 }
 .blackText {
-  display: inline-block;
+  display: block;
   font-size: 25px;
   position: relative;
   bottom: 10px;
