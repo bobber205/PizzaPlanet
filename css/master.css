@@ -31,9 +31,8 @@ body {
   background-color: #ce2c38;
   text-align: center;
   position: relative;
-  top: 70px;
-  /*line-height: 150px;
-  display: relative;*/
+  top: 70px; 
+  margin: 0 auto;
 }
 
 .whiteText {
